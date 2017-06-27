@@ -1,0 +1,627 @@
+/*
+1 - #363636 самый темный
+2 - #555555
+3 - #cccccc контур для маленьких окошек
+4 - #e1e1e1 самый светлый
+5 - #dadada фон для маленьких окошек
+оранжевый - #fd5d05
+зеленый - #3cb878
+красный - #f63260
+*/
+
+/*ОСНОВНЫЕ (хедер, футер, фон контента)*/
+
+*{
+    margin: 0 auto;
+    padding: 0;
+    font-family: Segoe Script;
+}
+body{
+    background-color: #cccccc;
+}
+a{
+    text-decoration: none;
+    color: #555555;
+}
+a:hover, no-active:hover, .active, .checked, .shine-a{
+    color: #fd5d05 !important;
+}
+.none{  
+    display: none !important;
+}
+li{
+    list-style-type: none;
+}
+.header{  
+    background-color: #e1e1e1;
+    padding: 50px 40px 30px 40px;
+}
+.main-menu{
+    display: flex;
+
+}
+.main-menu a{
+    color: #555555;
+}
+.text{
+    margin-bottom: 40px;
+    border-bottom: 1px solid rgba(253,93,5,.4);
+    padding-bottom: 20px;
+}
+
+.content{
+    width: 93%;
+    background-color: #e1e1e1;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    box-sizing: border-box;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 60px;
+}
+.flex{
+    display: flex;
+}
+.footer{
+    font-size: 12px;
+    
+}
+.footer li{
+    list-style: none;
+}
+.footer-main{
+    background-color: #555555;
+    padding: 10px 0px 10px 0px;
+    display: flex;
+}
+.footer-main label{
+    text-decoration: underline;
+    color: #fd5d05;
+}
+.footer-main a{
+    color: #cccccc;
+}
+.footer-icon{
+    background-color: #363636;
+    padding: 8px 0px 8px 0px;
+    color: #555555;
+    padding-left: 90px;
+    display: flex;
+}
+
+/*АВТОРИЗАЦИЯ, РЕГИСТРАЦИЯ*/
+
+.window{
+    background-color: #555555;
+    padding: 10px 15px 15px 15px;
+    width: 37%;
+    height: auto;
+    box-sizing: border-box;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.active{
+    background-color: #e1e1e1;
+    width: 50%;
+    height: 70px;
+    float: left;
+    padding: 0px 5px 0px 5px;
+    text-align: center;
+    box-sizing: border-box;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 23px;
+}
+.no-active{
+    color: #e1e1e1;
+    width: 50%;
+    float: left;
+    padding: 0px 5px 0px 5px;
+    text-align: center;
+    box-sizing: border-box;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 23px;
+}
+.autoriz-form{
+    background-color: #e1e1e1;
+    width: 100%;
+    margin-top: 30px;
+    padding-top: 42px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 23px;
+    text-align: center;
+}
+.autoriz-form input{
+    border: none;
+    background: none;
+    text-align: center;
+    margin-bottom: 14px;
+    border-bottom: 1px solid #fd5d05;
+}
+.autoriz-form button{
+    border: none;
+    color: #e1e1e1;
+    background: #3cb878;
+    width: 40%;
+    margin-bottom: 20px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 23px;
+}
+.autoriz-form a{
+    color: #555555;
+    margin-left: 66%;
+    font-size: 12px;
+}
+
+/*ГЛАВНАЯ СТРАНИЦА*/
+.img-index{
+    width: 50%;
+}
+.img-index:hover, .icon a:hover .img-index, 
+.write-header img:hover, .chat-header-img img:hover,
+.chat-footer-img img:hover, 
+.formuls img:hover, .members img:hover, .shrifts img:hover,
+.shine-img{
+    box-shadow: 0px 0px 33px green;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 40px;
+}
+.icons{
+    display: flex;
+    text-align: center;
+    border-bottom: 1px solid rgba(85,85,85,.4);
+    width: 90%;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+.icons a{
+    color: #555555;
+}
+.file{
+    background-color: #e1e1e1;
+    width: 40%;
+    height: 22px;
+    float: left;
+    padding: 0px 5px 0px 5px;
+    text-align: center;
+    box-sizing: border-box;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 7px;
+}
+.conspect{
+    background-color: #555555;
+    padding: 5px 5px 5px 5px;
+    width: 16%;
+    box-sizing: border-box;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.conspect-name{
+    background-color: #e1e1e1;
+    width: 100%;
+    height: 52px;
+    margin-top: 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 6px;
+    text-align: center;
+}
+.conspect-name a{
+    color: #555555;
+    display: block;
+    height: 100%;
+}
+.all-conspects{
+    display: flex;
+    margin-top:20px;
+}
+
+/*ПРОСМОТР СПИСКА ЛЕКЦИЙ*/
+.lection{
+    background-color: #cccccc;
+    text-align: center;
+    padding: 5px 5px 5px 5px;
+    width: 20%;
+    box-sizing: border-box;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 45px;
+    border: 1px solid #3cb878;
+}
+.lection a{
+    color: #555555;
+}
+.all-lections{
+    display: flex;
+    margin-top:20px;
+}
+.lection img{
+    width: 20%;
+}
+.lection:hover{
+    box-shadow: 0px 0px 33px green;
+}
+.lection a{
+    display: block;
+    height: 100%;
+}
+.up{
+    margin-left: 8%;
+    margin-right: 8%;
+    width: 9%;
+    text-align: center;
+    margin-top: 15px;
+}
+.up a{
+    color: #555;
+}
+/*СОЗДАНИЕ КОНСПЕКТА*/
+
+.close{
+    margin-left: 93%;
+    height: 33px;
+}
+.create-conspect{
+    text-align: center;
+}
+.create-conspect input{
+    border: none;
+    background: none;
+    text-align: center;
+    margin-bottom: 14px;
+    border-bottom: 1px solid #fd5d05;
+}
+.create-conspect select{
+    box-sizing: border-box;
+    padding: 5px 5px 5px 5px;
+    color: #555555;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background: none;
+    margin-bottom: 14px;
+    border: 1px solid #fd5d05;
+}
+.create-conspect legend{
+    color: #555555;
+    font-size: 12px;
+}
+.checkbox-list option{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.create-conspect button{
+    border: none;
+    color: #e1e1e1;
+    background: #3cb878;
+    width: 10%;
+    margin-bottom: 20px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 23px;
+}
+
+/*СОЗДАНИЕ ЛЕКЦИИ*/
+
+.create-lection{
+    text-align: center;
+}
+.create-lection input{
+    border: none;
+    background: none;
+    text-align: center;
+    margin-bottom: 14px;
+    border-bottom: 1px solid #fd5d05;
+}
+.create-lection select{
+    box-sizing: border-box;
+    padding: 5px 5px 5px 5px;
+    color: #555555;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background: none;
+    margin-bottom: 14px;
+    border: 1px solid #fd5d05;
+}
+.create-lection legend{
+    color: #555555;
+    font-size: 12px;
+}
+.checkbox-list option{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.create-lection button{
+    border: none;
+    color: #e1e1e1;
+    background: #3cb878;
+    width: 10%;
+    margin-bottom: 20px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 23px;
+}
+/*ИНФОБЛОК*/
+.info p{
+    margin-bottom: 10px;
+}
+.info label:first-child{
+    color: #fd5d05;
+}
+/*ПРОЦЕСС ЛЕКЦИИ*/
+
+.user{
+    color: #3cb878;
+}
+.right-content{
+    max-width: 65%;
+    min-width: 65%;
+    margin-right: 3%;
+    margin-left: 1%;
+}
+.left-content{
+    max-width: 28%;
+    min-width: 28%;
+    color: #555555;
+    margin-left: 3%;
+}
+/*ЧАТ*/
+.chat-header {
+    float: left;
+    height: 70px;
+    margin-bottom: 10px;
+    padding: 0px 5px 0px 5px;
+}
+.chat-footer{
+    margin-top: 10px;
+}
+.chat-header, .chat-footer{
+    background-color: #dadada;
+    width: 100%;
+    text-align: center;
+    border: 2px solid #cccccc;
+    box-sizing: border-box;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 20px;
+}
+
+.chat-footer{
+    display: flex;
+    padding: 0px 5px 0px 5px;
+}
+.chat-header-p{
+    float: left;
+    padding-top: 20px;
+    padding-left: 30%;
+}
+.chat-header-img{
+    padding-top: 14px;
+    padding-left: 82%;
+}
+.chat-header p{
+    color: #555555;
+    font-size: 18px;
+    margin-right: 35%;
+}
+.chat-header img{
+    height: 41px;
+}
+.chat{
+    background-color: #e1e1e1;
+    font-size: 12px;
+    margin-top: 30px;
+    border: 3px solid #cccccc;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 23px;
+}
+.chat-footer-a{
+    float: left;
+    padding-top: 20px;
+    padding-left: 5%;
+}
+.chat-footer-img{
+    padding-top: 10px;
+}
+.chat-footer textarea{
+    float: left;
+    resize: vertical;
+    border: none;
+    font-size: 13px;
+    color: #555555;
+    padding-left: 10px;
+    padding-top: 10px;
+    background-color: #dadada;
+    box-sizing: border-box;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 20px;
+    max-width: 75%;
+    min-width: 75%;
+    max-height: 310px;
+    min-height: 66px;
+}
+.chat-footer img{
+    height: 45px;
+}
+.chat-text{
+    padding-left: 6%;
+    padding-right: 6%;
+    overflow-y: auto;
+    height: 193px;
+}
+/*ФОРМА ЛЕКЦИИ*/
+.write{
+    background-color: #e1e1e1;
+    font-size: 12px;
+    border: 3px solid #cccccc;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 23px;
+}
+.write-header{
+    float: left;
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 70px;
+    background-color: #dadada;
+    width: 100%;
+    height: 70px;
+    text-align: center;
+    border: 2px solid #cccccc;
+    box-sizing: border-box;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 20px;
+}
+.write-header a{
+    color: #555555;
+}
+.write-header>a{
+    padding-left: 12px;
+    padding-right: 12px;
+}
+.write-header div{
+    margin-right: 4%;
+}
+.write-header img{
+    height: 41px;
+    margin-top: 12px;
+    float: left;
+}
+.write-text{
+    padding-left: 3%;
+    padding-top: 10px;
+    min-height: 520px;
+    overflow-y: auto;
+}
+.write-text textarea{
+    background-color: #e1e1e1;
+    color: #555555;
+    font-size: 14px;
+    border: none;
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 500px;
+    min-height: 500px;
+    resize: none;
+}
+.write-header>div{
+    padding-left: 12px;
+}
+.border-left-panel{
+    border-left: 1px solid #cacaca;
+    height: 60px;
+}
+.border-right-panel{
+    border-right: 1px solid #cacaca;
+    height: 60px;
+}
+.members{
+    margin-left: 6.375%;
+    margin-top: 357px;
+    width: 20%;
+}
+.membersContent{
+    overflow-y: auto;
+    max-height: 300px;
+}
+.shrifts{
+    height: auto;
+    min-width: 230px;
+    max-width: 20%;
+    max-height: 140px;
+    margin-left: 47%;
+    margin-top: 342px;
+}
+.formuls, .members, .shrifts{
+    width: 20%;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    background-color: #e1e1e1;
+    font-size: 12px;
+    border: 3px solid #cccccc;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 23px;
+    text-align: center;
+    padding: 5px 5px 5px 5px;
+}
+.formuls{
+    margin-left: 35%;
+    margin-top: 342px;
+}
+.formuls img, .members img, .shrifts img{
+    height: 20px;
+}
+.members li{
+    list-style-image: url('images/online.png');
+    font-size: 15px;
+}
+.movePanel{
+    background-color: #dadada;
+    cursor: move;
+    height: 23px;
+    margin-bottom: 10px;
+    text-align: center;
+    border: 2px solid #cccccc;
+    box-sizing: border-box;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 20px;
+}
+.movePanel a{
+    margin-left: 92%;
+}
+.formulsContent{
+    text-align: justify;
+    overflow-y: auto;
+    color: #555555;
+    max-height: 300px;
+    padding: 10px 10px 10px 10px;
+}
+.formulsContent > label{
+    font-size: 20px;
+    padding:  5px 5px 5px 5px;
+    cursor: pointer;
+}
+.formulsContent > label:hover{
+    background: #cccccc;
+}
+.times, .color, .size{
+    border: 1px solid #555555;
+    color: #555555;
+    box-sizing: border-box;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 20px;
+    padding: 5px;
+}
+.exampleColor{
+    height: 20px;
+    width: 20px;
+    margin: 11px 5px 0px 5px;
+    background-color: #555555;
+    float: left;
+}
+.divColor{
+    float: left;
+}
+.shrifts select{
+    margin: 4px;
+}
