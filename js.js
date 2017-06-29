@@ -267,6 +267,77 @@ function showSize(){
     }
 }
 
+function isFocus(){
+    if(chatTextarea == document.activeElement){
+        return false; //активен чат, значит, не активна лекция
+    }else{
+        return true;
+    }
+}
+function setCurrentId(event){
+    if(isFocus()){
+        current.id = "";
+        if(event.target.tagName != 'SPAN'){
+            lectionText.lastElementChild.id = 'current';
+        }else{
+            event.target.id = 'current';
+        }
+    }
+}
+function moveWithKey(event){
+    if(isFocus()){
+        if(event.key == 'ArrowLeft'){
+            if(current.previousElementSibling != null){
+                current.id = 'old';
+                old.previousElementSibling.id = 'current';
+                old.id = "";
+            }
+        }else if(event.key == 'ArrowRight'){
+            if(current.nextElementSibling != null){
+                current.id = 'old';
+                old.nextElementSibling.id = 'current';
+                old.id = "";
+            }
+        }else if(event.key == 'ArrowUp'){
+            var find = false;
+            var next = false;
+            if(current.previousElementSibling != null){
+                current.previousElementSibling.id = 'pre';
+            }else{
+                find = true;
+            }
+            for(var i = 0; lectionText.children.length >= i && !find; i++){
+                if(!next){
+                    if(current.offsetLeft < pre.offsetLeft){
+                        next = true;
+                    }else{
+                        pre.id = 'old';
+                        if(old.previousElementSibling != null){
+                            old.previousElementSibling.id = 'pre';
+                        }else{
+                            find = true;
+                        }
+                        old.id = "";
+                    }
+                }else{
+                    if(current.offsetLeft >= pre.offsetLeft){
+                        current.id = "";
+                        pre.id = 'current';
+                        find = true;
+                    }else{
+                        pre.id = 'old';
+                        if(old.previousElementSibling != null){
+                            old.previousElementSibling.id = 'pre';
+                        }else{
+                            find = true;
+                        }
+                        old.id = "";
+                    }
+                }
+            }
+        }
+    }
+}
 window.onload = function(){
     (function(){
         var date = new Date;
@@ -274,10 +345,14 @@ window.onload = function(){
         var m = date.getMinutes();
         var s = date.getSeconds();
         time.innerHTML = "Длительность: 00 : " + m + " : " + s;
-        window.setTimeout(arguments.callee, 500);
+        //window.setTimeout(arguments.callee, 500);
     })();
 
     times.addEventListener('mouseup', showTimes, false);
     color.addEventListener('mouseup', showColor, false);
     size.addEventListener('mouseup', showSize, false);
+    lectionText.lastElementChild.id = 'current';
+    lectionText.addEventListener('mousedown', setCurrentId, false);
+    document.body.addEventListener('keydown', moveWithKey, false);
+    
 };

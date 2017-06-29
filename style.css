@@ -10,7 +10,10 @@
 */
 
 /*ОСНОВНЫЕ (хедер, футер, фон контента)*/
-
+#current{
+    background: black;
+    color: white;
+}
 *{
     margin: 0 auto;
     padding: 0;
@@ -48,7 +51,9 @@ li{
     border-bottom: 1px solid rgba(253,93,5,.4);
     padding-bottom: 20px;
 }
-
+input:focus, textarea:focus{
+    outline: none;
+}
 .content{
     width: 93%;
     background-color: #e1e1e1;
@@ -509,7 +514,7 @@ li{
     min-height: 520px;
     overflow-y: auto;
 }
-.write-text textarea{
+.write-text div{
     background-color: #e1e1e1;
     color: #555555;
     font-size: 14px;
@@ -519,6 +524,9 @@ li{
     max-height: 500px;
     min-height: 500px;
     resize: none;
+}
+.write-text div span {
+    font-family: initial;
 }
 .write-header>div{
     padding-left: 12px;
